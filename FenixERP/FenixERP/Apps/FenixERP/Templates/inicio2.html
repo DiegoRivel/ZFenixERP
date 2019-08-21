@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load render_table from django_tables2 %}
+{% load staticfiles %}
+{% block title %}
+ Refacciones DZGET
+{% endblock %}    
+{% block Encabezado %} Resultado {% endblock %}
+{% block Cuerpo %}
+<div class="card-deck row">
+{% for item in datos2 %}
+    <div class="card">
+        <img class="card-img-top" src="/media/{{ item.imagen }}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title"><a href="/mapGoogle/?Mapa={{ item.Tienda }}">{{ item.Nombre }} </a></h5>
+        <p class="card-text">{{ item.Precio }}</p>
+        <p class="card-text"><small class="text-muted">{{ item.Descripcion }}</small></p>
+        </div>
+    </div>
+{% endfor %}         
+</div>  
+
+{% endblock %}
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Test</title>
+    <style>
+      .headerbar {
+        background: #ce5937;
+        color: #fff;
+        line-height: 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        z-index: ;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="headerbar" i-amphtml-fixedid="F1" style="top: calc(0px);">
+      <div
+        role="button"
+        on="tap:sidebar1.toggle"
+        tabindex="0"
+        class="hamburger"
+      >
+        ☰
+      </div>
+      <a href="http://127.0.0.1:8000/hola/" class="site-name">Main page</a>
+    </header>
+    <br />
+    <h1 style="color: #5e9ca0;">
+      <span style="color: #5e9ca0;">Bienvenido al </span
+      ><span style="color: #2b2301;">sistema de</span
+      ><span style="color: #5e9ca0;">&nbsp;Busqueda!</span>
+    </h1>
+    <h2 style="color: #2e6c80;">Ingresa la pieza a buscar:</h2>
+    <input type="Pieza" />
+    <br />
+    <input type="button" value="capturar" />
+    <br />
+    <br />
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1794.8057044565878!2d-97.54625734197167!3d25.88226399589557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDUyJzU2LjIiTiA5N8KwMzInNDIuNiJX!5e0!3m2!1ses-419!2smx!4v1556628070020!5m2!1ses-419!2smx"
+      width="600"
+      height="450"
+      frameborder="0"
+      style="border:0"
+      allowfullscreen
+    ></iframe>
+    <h1>{{ fecha_actual }}</h1>
+  </body>
+</html>

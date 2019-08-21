@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% block title %}La fecha actual
+
+    {% endblock %}   
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+  {% block Encabezado %}
+  <h1 align="center" style="color: mediumblue">Ubicacion de la refaccion</h1>
+  {% endblock %}
+{% block Cuerpo %}
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="{{ table.urlDireccion }}" frameborder="0" 
+    style="border:0" allowfullscreen></iframe>
+</div>
+{% endblock %}

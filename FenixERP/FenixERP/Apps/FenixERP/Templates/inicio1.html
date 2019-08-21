@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load render_table from django_tables2 %}
+{% block title %}La fecha actual
+
+{% endblock %}    
+{% block Encabezado %} {% endblock %}
+{% block Cuerpo %}
+<h1 align="center" style="color: mediumblue">Refacciones disponibles</h1>
+<table class="table table-dark table-responsive-lg" border="8px solid" style="width:90%" align="center">         
+    <thead>
+        <tr>       
+            <th class="orderable">                       
+                    <a href="?Nombre=l&amp;sort=Nombre">Nombre</a>
+            </th>
+            <th class="orderable">       
+                    <a href="?Nombre=l&amp;sort=Tienda">Tienda</a>
+            </th>
+            <th class="orderable">       
+                    <a href="?Nombre=l&amp;sort=Precio">Precio</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>            
+        {% for item in datos2 %}
+        <tr id="table_content">
+            <td style="width: 250px">
+            <div id="link-product">
+                <a id= "product-clicked" href="/mapGoogle/?Mapa={{ item.Tienda }}" name="Mapa" method="post"> 
+                    {{ item.Nombre }} 
+                </a> 
+            </div> 
+            </td>
+            <td style="width: 250px">
+                <div id="link-product">
+                    <a id= "product-clicked" href="mapGoogle/" name="Mapa" method="post"> 
+                        {{ item.Tienda }} 
+                    </a> 
+                </div> 
+                </td>
+            <td style="width: 250px">
+                    <div id="link-product">
+                        <a id= "product-clicked" href="mapGoogle/" name="Mapa" method="post"> 
+                            {{ item.Precio }} 
+                        </a> 
+                    </div> 
+            </td>
+        </tr>
+        {% endfor %}         
+    </tbody>      
+</table>
+
+{% endblock %}
+

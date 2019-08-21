@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Localiza tu refaccion{% endblock %}    
+{% block Encabezado %}
+<h1 align="center" style="color: mediumblue">Bienvenido al sistema de busqueda de refacciones</h1>
+{% endblock %}
+{% block Cuerpo %}
+<img align="center" src="{% static '750.jpg'%}" class="img-responsive" alt="Imagen principal">
+<form action="/hola/" method="get">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
